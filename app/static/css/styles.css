@@ -48,10 +48,11 @@ body {
     margin: 50px auto;
     padding: 20px;
     width: 400px;
-    background-color: #ffe4e1;
-    border: 5px dashed #ff4500;
+    background-color: #392524;
+    border: 5px dashed #E82C00;
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
 }
 
 /* Поля ввода */
@@ -60,7 +61,7 @@ body {
     width: 80%;
     padding: 10px;
     margin: 10px 0;
-    border: 2px solid #3e3938;
+    border: 2px solid #DBD4D3;
     border-radius: 10px;
     font-size: 1.2rem;
     background-color: #ff595947;
@@ -74,9 +75,16 @@ body {
     transition: 0.3s ease;
 }
 
+.funny-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
 /* Кнопка */
 .funny-button {
-    background-color: #ff4500;
+    background-color: #ff4500c4;
     color: white;
     font-size: 1.5rem;
     padding: 10px 20px;
