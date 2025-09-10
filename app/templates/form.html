@@ -7,15 +7,26 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1 class="funny-title">Enter Your Details!</h1>
-    <form action="/submit" method="POST" class="funny-form">
-        <label for="name">Your Super Cool Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+<h1 class="funny-title">Enter Your Details!</h1>
+<form action="/submit" method="POST" class="funny-form">
+    <div class="funny-inputs">
+        <div class="funny-input">
+            <label for="name">Your Super Cool Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
 
-        <label for="email">Your Awesome Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <div class="funny-input">
+            <label for="email">Your Awesome Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="funny-input">
+            <label for="color">Your Favourite Color:</label>
+            <input type="color" name="color" id="color">
+        </div>
+    </div>
+    
 
-        <button type="submit" class="funny-button">🚀 Let's Go!</button>
-    </form>
+    <button type="submit" class="funny-button">🚀 Let's Go!</button>
+</form>
 </body>
 </html>
