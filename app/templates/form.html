@@ -10,12 +10,12 @@
         <div class="funny-blocks">
             <div class="funny-input">
                 <label for="name">Your Super Cool Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" >
             </div>
 
             <div class="funny-input">
                 <label for="email">Your Awesome Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" >
             </div>
             <div class="funny-input">
                 <label for="color">Your Favourite Color:</label>
@@ -50,7 +50,7 @@
             <div class="funny-input">
                 <p>Your Level:</p>
                 <div class="levels">
-                    <label><input type="radio" name="level" value="beginner" required> Beginner 😀</label>
+                    <label><input type="radio" name="level" value="beginner"  checked> Beginner 😀</label>
                     <label><input type="radio" name="level" value="advanced"> Advanced 🤔</label>
                     <label><input type="radio" name="level" value="advanced"> Pro 😎</label>
                 </div>
@@ -66,5 +66,6 @@
 {% endblock %}
 
 {% block extra_js %}
+    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script type="module" src="{{ url_for('static', filename='js/runaway.js') }}"></script>
 {% endblock %}
