@@ -11,7 +11,8 @@ p {
     margin: 0 0 10px 0
 }
 
-/* Заголовок */
+/* <--------- Form page --------->*/
+
 .funny-title {
     font-size: 3rem;
     margin-top: 20px;
@@ -51,7 +52,7 @@ p {
 }
 
 /* Стили формы */
-.funny-form, .result {
+.funny-form {
     margin: 50px auto;
     padding: 20px;
     width: 400px;
@@ -136,3 +137,30 @@ p {
     flex-direction: column;
     justify-content: center;
 }
+
+/* <------ Result page ------> */
+.results {
+    margin: 50px auto;
+    padding: 20px;
+    width: 400px;
+    background-color: #392524;
+    border: 5px dashed #E82C00;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.results .hobbies-list {
+    margin: 0 auto;
+    max-width: fit-content;
+    padding: 0;
+}
+
+.results .hobbies-list .hobby-item {
+    max-width: fit-content;
+}
+
