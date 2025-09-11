@@ -1,4 +1,3 @@
-import webcolors
 from flask import render_template, request, redirect, url_for
 from webcolors import hex_to_rgb
 
@@ -14,10 +13,15 @@ def form():
 @app.route("/submit", methods=["POST", "GET"])
 def submit():
     if request.method == "POST":
-        name = request.form.get("name")
-        email = request.form.get("email")
-        color = request.form.get("color")
-        text_color = get_color_name(hex_to_rgb(color))
-        return render_template("result.html", name=name, email=email, color=text_color)
+        form_data = dict(request.form.lists())
+        rgb_color = hex_to_rgb(form_data['color'][0])
+        color_text = get_color_name(rgb_color)
+        return render_template("result.html",
+                               name=form_data['name'][0],
+                               email=form_data['email'][0],
+                               color=color_text,
+                               profession=form_data['profession'][0],
+                               hobbies=form_data['hobbies'],
+                               level=form_data['level'][0])
     else:
         return redirect(url_for("form"))
