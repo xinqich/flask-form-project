@@ -1,10 +1,10 @@
 import webcolors
 
 
-def closest_color(requested_color):
+def closest_color(requested_color: tuple[int, int, int]):
     min_colors = {}
-    for key, name in webcolors._definitions._CSS3_HEX_TO_NAMES.items():
-        r_c, g_c, b_c = webcolors.hex_to_rgb(key)
+    for name in webcolors.names():
+        r_c, g_c, b_c = webcolors.name_to_rgb()
         rd = (r_c - requested_color[0]) ** 2
         gd = (g_c - requested_color[1]) ** 2
         bd = (b_c - requested_color[2]) ** 2
@@ -14,9 +14,8 @@ def closest_color(requested_color):
 def get_color_name(rgb_tuple):
     try:
         # Convert RGB to hex
-        hex_value = webcolors.rgb_to_hex(rgb_tuple)
         # Get the color name directly
-        return webcolors.hex_to_name(hex_value)
+        return webcolors.rgb_to_name(rgb_tuple)
     except ValueError:
         # If exact match not found, find the closest color
         return closest_color(rgb_tuple)
