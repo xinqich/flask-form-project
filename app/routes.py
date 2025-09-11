@@ -21,7 +21,7 @@ def submit():
                                email=form_data['email'][0],
                                color=color_text,
                                profession=form_data['profession'][0],
-                               hobbies=form_data['hobbies'],
+                               hobbies=form_data.get('hobbies', None),
                                level=form_data['level'][0])
     else:
         return redirect(url_for("form"))
