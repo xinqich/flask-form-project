@@ -133,9 +133,11 @@ p {
     cursor: pointer;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     animation: bounce 1s infinite;
+    /* margin-bottom: 20px; */
 }
 
-button.funny-button {}
+button.funny-button {
+}
 
 /* Анимация кнопки */
 @keyframes bounce {
@@ -155,6 +157,7 @@ button.funny-button {}
 }
 
 .buttons .surprise-button {
+    position: absolute;
     background-color: #a020f0;
     color: white;
     font-size: 0.8rem;
@@ -164,9 +167,14 @@ button.funny-button {}
     cursor: pointer;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     animation: bounce 1s infinite;
+    top: 775px;
 }
 
-,button .fake-btn
+.buttons .fake-btn {
+    height: 29px;
+    width: 103px;
+    visibility: hidden;
+}
 
 /* <------ Result page ------> */
 .results {
