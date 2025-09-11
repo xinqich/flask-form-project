@@ -4,7 +4,7 @@ import webcolors
 def closest_color(requested_color: tuple[int, int, int]):
     min_colors = {}
     for name in webcolors.names():
-        r_c, g_c, b_c = webcolors.name_to_rgb()
+        r_c, g_c, b_c = webcolors.name_to_rgb(name)
         rd = (r_c - requested_color[0]) ** 2
         gd = (g_c - requested_color[1]) ** 2
         bd = (b_c - requested_color[2]) ** 2
