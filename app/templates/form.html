@@ -50,7 +50,7 @@
             <div class="funny-input">
                 <p>Your Level:</p>
                 <div class="levels">
-                    <label><input type="radio" name="level" value="beginner"> Beginner 😀</label>
+                    <label><input type="radio" name="level" value="beginner" required> Beginner 😀</label>
                     <label><input type="radio" name="level" value="advanced"> Advanced 🤔</label>
                     <label><input type="radio" name="level" value="advanced"> Pro 😎</label>
                 </div>
@@ -59,8 +59,12 @@
 
         <div class="buttons">
             <button type="submit" class="funny-button">🚀 Let's Go!</button>
-            <button class="surprise-button" id="runaway-btn" tabindex="1">Click me! &#129315</button>
-            <button class="fake-btn">dw</button>
+            <button class="surprise-button" id="runawayBtn" tabindex="1">Click me! &#129315</button>
+            <button class="fake-btn"></button>
         </div>
     </form>
+{% endblock %}
+
+{% block extra_js %}
+    <script type="module" src="{{ url_for('static', filename='js/runaway.js') }}"></script>
 {% endblock %}
