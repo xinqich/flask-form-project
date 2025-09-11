@@ -1,27 +1,31 @@
 {% extends 'base.html' %}
 
 {% block title %}
-	Your Results!
+    Your Results!
 {% endblock %}
 
 {% block content %}
     <h1 class="funny-title">Your Results!</h1>
-	<div class="results">
+    <div class="results">
         <div class="answer">
-			Thank you for submitting, <strong>{{ name }}</strong>!
-		</div>
-		<div class="answer">We have sent a confirmation to <strong>{{ email }}</strong>.</div>
-		<div class="answer">Your favourite color is: <strong>{{ color }}</strong>. Great choice!</div>
-		<div class="answer">Wow, you work as a <strong> {{ profession }}</strong>, impressive!</div>
-		<div class="answer">
-			<span>Your hobbies are:</span>
-			<ul class="hobbies-list">
-                {% for hobby in hobbies %}
-                	<li class="hobby-item">{{ hobby }}</li>
-                {% endfor %}
-
-			</ul>
-		</div>
-		<div class="answer">Finally, your level is <strong>{{ level }}</strong>, good job!</div>
+            Thank you for submitting, <strong>{{ name }}</strong>!
+        </div>
+        <div class="answer">We have sent a confirmation to <strong>{{ email }}</strong>.</div>
+        <div class="answer">Your favourite color is: <strong>{{ color }}</strong>. Great choice!</div>
+        <div class="answer">Wow, you work as a <strong> {{ profession }}</strong>, impressive!</div>
+        <div class="answer">
+            {% if not hobbies %}
+                <p>You have no hobbies :(</p>
+            {% else %}
+                <span>Your hobbies are:</span>
+                <ul class="hobbies-list">
+                    {% for hobby in hobbies %}
+                        <li class="hobby-item">{{ hobby }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="answer">Finally, your level is <strong>{{ level }}</strong>, good job!</div>
     </div>
 {% endblock %}
+
